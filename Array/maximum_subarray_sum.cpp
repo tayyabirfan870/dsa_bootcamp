@@ -48,4 +48,6 @@ int main(){
     print_subarray(array, size);
     MSS_bruteforce(array, size);
     MSS_kadane_algo(array,size);
+    return 0;
+    // by tayyab irfan 
 }
