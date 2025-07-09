@@ -14,5 +14,14 @@ int main(){
     vec.pop_back();
     cout<<"last element delete by vec.pop_back fuction so now ventor element "<<vec[0]<<endl;
     cout<<"size after pop_back function = "<<vec.size()<<endl;
+    vector<char>vec_char(5,'A');
+    for(char i: vec_char){
+        cout<<i<<endl;
+    }
+    vector<int>vec_int={1,2,3,4,5};
+    cout<<vec_int.at(1)<<endl;
+    for(int i:vec_int){
+        cout<<i<<endl;
+    }
     return 0;
 }
