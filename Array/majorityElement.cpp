@@ -2,6 +2,7 @@
 using namespace std;
 #include<vector>
 #include<algorithm>
+// brute force O(n2)
 int majorityElementBruteForce(vector<int> nums){
     int n=nums.size();
     for(int val: nums){
@@ -17,7 +18,7 @@ int majorityElementBruteForce(vector<int> nums){
     }
 
 }
-// optimize approach
+// optimize approach O(nlogn)
 int majorityElementOptimiz(vector<int> nums){
     sort(nums.begin(),nums.end());
     int n=nums.size();
@@ -36,7 +37,7 @@ int majorityElementOptimiz(vector<int> nums){
     }
 }
 
-// mojority element by Moore's algo
+// mojority element by Moore's algo O(n)
 int majorityElementByMooreAlgo(vector<int> nums){
     int ans=0;
     int frequency=0;
@@ -50,11 +51,20 @@ int majorityElementByMooreAlgo(vector<int> nums){
             frequency--;
         }
     }
-    return ans;
+    // variation|majority element exist or not
+    int count=0;
+    for(int val:nums){
+        if(val==ans){
+            count++;
+        }
+    }
+    if(count>(nums.size()/2)){return ans;}
+    else
+    return -1;
 }
 
 int main(){
-    vector<int> nums={2,2,2,1,1};
+    vector<int> nums={1,2,3,4};
     cout<<"majority element by brute force approach : "<<majorityElementBruteForce(nums)<<endl;
     cout<<"majority element by optimized approach : "<<majorityElementOptimiz(nums)<<endl;
     cout<<"majority element by moore's algorithem : "<<majorityElementByMooreAlgo(nums)<<endl;
