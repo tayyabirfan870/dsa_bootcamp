@@ -51,20 +51,11 @@ int majorityElementByMooreAlgo(vector<int> nums){
             frequency--;
         }
     }
-    // variation|majority element exist or not
-    int count=0;
-    for(int val:nums){
-        if(val==ans){
-            count++;
-        }
-    }
-    if(count>(nums.size()/2)){return ans;}
-    else
-    return -1;
+    return ans;
 }
 
 int main(){
-    vector<int> nums={1,2,3,4};
+    vector<int> nums={2,2,2,1,1};
     cout<<"majority element by brute force approach : "<<majorityElementBruteForce(nums)<<endl;
     cout<<"majority element by optimized approach : "<<majorityElementOptimiz(nums)<<endl;
     cout<<"majority element by moore's algorithem : "<<majorityElementByMooreAlgo(nums)<<endl;

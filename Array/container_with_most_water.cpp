@@ -1,6 +1,7 @@
 #include<iostream>
 #include<vector>
 using namespace std;
+//O(n)
 int maxWaterByoptimizeapproach(vector<int>heights){
     int leftpointer=0;
     int rightpointer=heights.size()-1;
@@ -17,7 +18,7 @@ int maxWaterByoptimizeapproach(vector<int>heights){
 }
 int main(){
 vector<int>heights={1,8,6,2,5,4,8,3,7};
-//by bruteforce approach
+//by bruteforce approach O(n2)
 int maxWater=0;
 for(int i=0; i<heights.size(); i++){
     for(int j=i+1; j<heights.size(); j++){
