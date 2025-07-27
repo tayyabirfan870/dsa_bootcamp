@@ -15,7 +15,7 @@ int CountPrimeNum(int n){
     for(int i=2; i<n; i++){
         if(isPrimeNum[i]){
             count++;
-                for(int j=i*2; j<n; j=j+i){
+                for(int j=i*i; j<n; j=j+i){
                 isPrimeNum[j]=false;
             }
         }
@@ -30,7 +30,7 @@ int main(){
     }else{
         cout<<"non prime "<<endl;
     }
-    cout<<CountPrimeNum(15)<<endl;
+    cout<<CountPrimeNum(42)<<endl;
     return 0;
 
 }
