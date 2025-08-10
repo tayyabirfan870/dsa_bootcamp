@@ -35,7 +35,26 @@ return 0;
 }
 
 
+/*
 
+1. Problem Representation:
+The maze is typically represented as a 2D array or matrix where cells marked '1' are open paths and '0' are blocked walls.
+The rat starts at a designated source (e.g., top-left corner) and aims to reach a destination (e.g., bottom-right corner).
+The rat can usually move in four directions: up, down, left, and right.
+A key constraint often involves not revisiting already visited cells within a single path.
+2. Recursion:
+Recursion is used to explore potential paths from the current position.
+A recursive function is defined that takes tohe current cordinates (row, column) as input.
+Base Case: If the rat reaches the destination cell, a path has been found, and the function can record or print it.
+Recursive Step: From the current cell, the function attempts to move in each valid direction (up, down, left, right).
+For each valid move, it recursively calls itself with the new coordinates.
+3. Backtracking:
+Backtracking is the mechanism that allows exploration of alternative paths when a dead end is encountered or a path leads to a blocked cell.
+Marking Visited Cells: Before making a recursive call to a new cell, that cell is typically marked as "visited" or "part of the current path" to prevent cycles and ensure each cell is visited only once per path.
+Undoing Changes (Backtracking): If a recursive call from a particular cell does not lead to a solution (e.g., it hits a dead end or no valid moves are possible), the algorithm "backtracks." This involves:
+Unmarking the current cell as "visited" or "part of the path." This effectively removes it from the current path and allows it to be considered for other potential paths.
+Returning to the previous position in the recursion stack to explore other untried directions from that position.
+*/
 
 
 
