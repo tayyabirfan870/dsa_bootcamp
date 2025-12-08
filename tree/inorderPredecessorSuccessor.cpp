@@ -33,8 +33,8 @@ Node* leftMostInRightSubtree(Node* root){
 
 vector<int> getPredecessorSuccessor(Node* root, int key){
     Node* curr=root;
-    Node* predecessor;
-    Node* successor;
+    Node* predecessor = NULL;
+    Node* successor = NULL;
 
     while(curr != NULL){
         if(key < curr->data){

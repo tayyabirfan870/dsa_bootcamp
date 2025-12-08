@@ -1,3 +1,73 @@
+#include<iostream>
+using namespace std;
+class Person{
+    public:
+    string name;
+    int age;
+    Person(){
+        cout<<" base class constructor called \n";
+    }
+    ~Person(){
+        cout<<"base class destructor called\n";
+    }
+};
+class Student : public Person{
+    public:
+    int rollnum;
+    Student(){
+        cout<<"derived class constructor called\n";
+    }
+    void getinfo(){
+        cout<<"name "<<name<<endl;
+        cout<<"age "<<age<<endl;
+        cout<<"rollnum "<<rollnum<<endl;
+
+    }
+    ~Student(){
+        cout<<"derived class destructor called\n";
+    }
+};
+int main(){
+    Student s1;
+    s1.name="tayyab ";
+    s1.age=11;
+    s1.rollnum=28;
+s1.getinfo();
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 #include<iostream>
 using namespace std;
@@ -385,36 +455,36 @@ int main(){
     return 0;
 }
 */
-#include<iostream>
-using namespace std;
-class Person{
-    public:
-    string name;
-    int age;
-};
-class Student : public Person{
-    public:
-    int rollnum;
-    void getinfo(){
-        cout<<"name "<<name<<endl;
-        cout<<"age "<<age<<endl;
-        cout<<"rollnum "<<rollnum<<endl;
+// #include<iostream>
+// using namespace std;
+// class Person{
+//     public:
+//     string name;
+//     int age;
+// };
+// class Student : public Person{
+//     public:
+//     int rollnum;
+//     void getinfo(){
+//         cout<<"name "<<name<<endl;
+//         cout<<"age "<<age<<endl;
+//         cout<<"rollnum "<<rollnum<<endl;
 
-    }
-};
+//     }
+// };
 
-// drived class
-class Gradstudent : public Student{
-    public:
-    string reasearchArea;
-};
-int main(){
-    Gradstudent s1;
-    Gradstudent s2;
-    s1.name="tayyab";
-    s1.reasearchArea="oop";
-    cout<<s1.name<<endl;
-    cout<<s1.reasearchArea<<endl;
-    return 0;
-}
+// // drived class
+// class Gradstudent : public Student{
+//     public:
+//     string reasearchArea;
+// };
+// int main(){
+//     Gradstudent s1;
+//     Gradstudent s2;
+//     s1.name="tayyab";
+//     s1.reasearchArea="oop";
+//     cout<<s1.name<<endl;
+//     cout<<s1.reasearchArea<<endl;
+//     return 0;
+// }
 
