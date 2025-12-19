@@ -41,7 +41,7 @@ int main(){
                                  {'0','0','1','0','0'},
                                  {'0','0','0','1','1'}};
 
-    cout<<"number of island: "<<numIslands(grid);                             
+    cout<<"number of island: "<<numIslands(grid);                              
 
     return 0;
 }
