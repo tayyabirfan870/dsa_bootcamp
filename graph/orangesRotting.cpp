@@ -8,7 +8,7 @@ int orangeRotting(vector<vector<int>> &grid) {
     int m = grid[0].size();
     int ans = 0;
 
-    vector<vector<bool>> visited(n,vector<bool>(n,false));
+    vector<vector<bool>> visited(n,vector<bool>(m,false));
     queue<pair<pair<int,int>,int>> q;
 
     //pushing all sources in queue
